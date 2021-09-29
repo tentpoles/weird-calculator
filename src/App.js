@@ -79,21 +79,21 @@ const App = () => {
   return (
     <div className="page-container">
       <div className="input-group-container">
-        <div className="input-group">
+        <div className="input-group animate__animated animate__fadeInLeft">
           <input type="number" value={firstInput.value} onChange={inputController} id="first-input" className="input-number" placeholder="First number..."/>
           <label htmlFor="first-checkbox" className='label-group'>
             <input type="checkbox" onChange={checkboxController} id="first-checkbox" className="checkbox"/>
             <i className="fas fa-toggle-on"></i>
           </label>
         </div>
-        <div className="input-group">
+        <div className="input-group animate__animated animate__fadeInLeft animate__fast">
           <input type="number" value={secondInput.value} onChange={inputController} id="second-input" className="input-number" placeholder="Second number..." />
           <label htmlFor="second-checkbox" className='label-group'>
             <input type="checkbox" onChange={checkboxController} id="second-checkbox" className="checkbox"/>
             <i className="fas fa-toggle-on"></i>
           </label>
         </div>
-        <div className="input-group">
+        <div className="input-group animate__animated animate__fadeInLeft animate__faster">
           <input type="number" value={lastInput.value} onChange={inputController} id="last-input" className="input-number" placeholder="Last number..." />
           <label htmlFor="last-checkbox" className='label-group'>
             <input type="checkbox" onChange={checkboxController} id="last-checkbox" className="checkbox"/>
@@ -102,7 +102,7 @@ const App = () => {
         </div>
       </div>
       <div className="radio-group-container">
-        <div className="radio-group">
+        <div className="radio-group animate__animated animate__bounceIn animate__delay-1s">
           <div className="radio-card">
             <input type="radio" value="plus" name="operator" id="plus" onChange={radioButtonController} className="radio-button" />
             <label htmlFor="plus" className="operator-value" title="Plus">
@@ -110,7 +110,7 @@ const App = () => {
             </label>
           </div>
         </div>
-        <div className="radio-group">
+        <div className="radio-group animate__animated animate__bounceIn animate__delay-1s">
           <div className="radio-card">
             <input type="radio" value="minus" name="operator" id="minus" onChange={radioButtonController} className="radio-button" />
             <label htmlFor="minus" className="operator-value" title="Minus">
@@ -118,7 +118,7 @@ const App = () => {
             </label>
           </div>
         </div>
-        <div className="radio-group">
+        <div className="radio-group animate__animated animate__bounceIn animate__delay-1s">
           <div className="radio-card">
             <input type="radio" value="times" name="operator" id="times" onChange={radioButtonController} className="radio-button" />
             <label htmlFor="times" className="operator-value" title="Times">
@@ -126,7 +126,7 @@ const App = () => {
             </label>
           </div>
         </div>
-        <div className="radio-group">
+        <div className="radio-group animate__animated animate__bounceIn animate__delay-1s">
           <div className="radio-card">
             <input type="radio" value="divide" name="operator" id="divide" onChange={radioButtonController} className="radio-button" />
             <label htmlFor="divide" className="operator-value" title="Divide">
@@ -136,8 +136,8 @@ const App = () => {
         </div>
       </div>
       <div className="result-container">
-        <div className="line-break"></div>
-        <div className="result-value">
+        <div className="line-break animate__animated animate__fadeInUp animate__delay-2s animate__faster"></div>
+        <div className="result-value animate__animated animate__fadeInUp animate__delay-2s animate__fast">
           <span>Result:</span>
           <span><span className="valid-value">{result}</span> {error ? <span className="error-value">Error!</span> : <></>}</span>
         </div>
