@@ -1,5 +1,5 @@
 # Weird Calculator 
 
-Master Branch: https://github.com/tentpoles/pokepedia-app/tree/master
+Master Branch: https://github.com/tentpoles/weird-calculator/tree/master
 
-Demo Link: https://tentpoles.github.io/pokepedia-app/
+Demo Link: https://tentpoles.github.io/weird-calculator/
