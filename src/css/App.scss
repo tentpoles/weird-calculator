@@ -1,0 +1,215 @@
+/* 
+
+Developed by Bhimo Al Kautsar
+----------------------------------------------------------
+
+Github: https://github.com/tentpoles
+Codepen: https://codepen.io/b-alkautsar 
+LinkedIn: https://www.linkedin.com/in/b-alkautsar
+Instagram: https://www.instagram.com/tentpolesman
+Direct Link: https://biolinky.co/alkautsar
+
+----------------------------------------------------------
+Test case purpose only
+
+*/
+
+/* CSS Master Reset */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0; 
+  box-sizing: border-box;
+  font-weight: inherit;
+  font-style: inherit;
+  font-family: inherit;
+  font-size: 100%;
+  text-decoration: none;
+  scroll-behavior: smooth;
+}
+/* End */
+
+:root {
+    --primary-text-color: #575757;
+    --white-color: #fff;
+    --font-medium: 300;
+    --font-regular: 500;
+    --font-bold: 700;
+  }  
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    font-family: 'Inter', sans-serif;
+    letter-spacing: 0.15mm;
+    color: var(--primary-text-color);
+    font-weight: var(--font-regular);
+    position: relative;
+    background: #f7f7f7;
+}
+
+/* Reset input appearance */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0;
+}
+input[type=number] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+/* End */
+
+.page-container {
+    width: 100%;
+    padding: 24px 12px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    .input-group-container {
+        max-width: 400px;
+        margin: 0 auto;
+        padding: 0 8px;
+        & > * + * {
+            margin-top: 16px;
+        }
+    }
+}
+
+.input-group {
+    width: 100%;
+    position: relative;
+    .input-number {
+        width: 100%;
+        border-radius: 12px;
+        font-size: 14px;
+        height: 50px;
+        padding: 12px 64px 12px 16px;
+        color: var(--primary-text-color);
+        background: var(--white-color);
+        border: 1px solid var(--white-color);
+        transition: all .25s ease-in-out;
+        font-weight: var(--font-bold);
+        box-shadow: 0px 8px 16px -5px rgba(156,156,156,0.2);
+        letter-spacing: 0.25mm;
+        &:focus {
+            border: 1px solid #1ed760;
+        }
+        &::placeholder {
+            transition: all .25s ease-in-out;
+            opacity: 0.5;
+            font-weight: var(--font-medium);
+            letter-spacing: 0.2mm;
+        }
+        &:focus::placeholder {
+            opacity: 0;
+            transform: translateY(-12px);
+        }
+    }
+}
+.label-group {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 14px;
+    i {
+        font-size: 32px;
+        transform: scaleX(-1);
+        color: #cdcdcd;
+        cursor: pointer;
+    }
+    .checkbox {
+        display: none;
+        &:checked + i {
+            transform: scaleX(1);
+            color: #1ed760;
+        }
+    }
+}
+
+.radio-group-container {
+    display: flex;
+    align-items: center;
+    max-width: 400px;
+    flex-wrap: wrap;
+    margin: 20px auto 0 auto;
+    .radio-group {
+        flex: 0 0 25%;
+        padding: 8px;
+        .operator-value {
+            width: 100%;
+            color: #cdcdcd;
+            height: 72px;
+            display: block;
+            border-radius: 12px;
+            background: var(--white-color);
+            transition: all .25s ease-in-out;
+            box-shadow: 0px 8px 16px -5px rgba(156,156,156,0.2);
+            position: relative;
+            i {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                font-size: 24px;
+            }
+            &:hover {
+                color: var(--white-color);
+                background: #1ed760;
+            }
+        }
+        .radio-button {
+            display: none;
+            &:checked {
+                & + .operator-value {
+                    color: var(--white-color);
+                    background: #1ed760;
+                }
+            }
+        }
+        .operator-value {
+            cursor: pointer;
+        }
+        @media (max-width: 400px) {
+            flex: 0 0 50%;
+        }
+    }
+}
+
+.result-container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 0 8px;
+    .result-value {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-weight: var(--font-bold);
+        font-size: 20px;
+        letter-spacing: 0.2mm;
+        .error-value {
+            color: #de6257;
+        }
+        .valid-value {
+            color: #1ed760;
+        }
+        @media (max-width: 400px) {
+            font-size: 18px;
+        }
+    }
+    .line-break {
+        width: 100%;
+        height: 5px;
+        background: #cdcdcd;
+        border-radius: 12px;
+        margin: 18px 0 20px 0;
+        box-shadow: 0px 8px 16px -5px rgba(156,156,156,0.2);
+    }
+}
