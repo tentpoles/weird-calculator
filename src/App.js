@@ -34,9 +34,11 @@ const App = () => {
   useEffect(() => {
     const calculate = () => {
       let tmpResult = null;
+      let number = [];
       let numbers = [];
       let countTrue = 0;
-      numbers = [...numbers, firstInput, secondInput, lastInput];
+      number = [...number, firstInput.value === '' ? 0 : firstInput.value, secondInput.value === '' ? 0 : secondInput.value, lastInput.value === '' ? 0 : lastInput.value];
+      numbers = [...numbers, firstInput === '' ? 0 : firstInput, secondInput === '' ? 0 : secondInput, lastInput === '' ? 0 : lastInput];
       numbers.forEach((number) => {
         if(number.checked === true) {
           countTrue = countTrue + 1;
@@ -47,20 +49,20 @@ const App = () => {
           for(let i = 0; i < numbers.length; i++) {
             if(numbers[i].checked === true) {
               if(tmpResult === null) {
-                 tmpResult = numbers[i].value;
+                 tmpResult = number[i];
               }
               else {
                 if(operator === 'plus') {
-                  tmpResult = tmpResult + numbers[i].value;
+                  tmpResult = tmpResult + number[i];
                 }
                 else if(operator === 'minus') {
-                  tmpResult = tmpResult - numbers[i].value;
+                  tmpResult = tmpResult - number[i];
                 }
                 else if(operator === 'times') {
-                  tmpResult = tmpResult * numbers[i].value;
+                  tmpResult = tmpResult * number[i];
                 }
                 else if(operator === 'divide') {
-                  tmpResult = tmpResult / numbers[i].value;
+                  tmpResult = tmpResult / number[i];
                 }
               }
             }
