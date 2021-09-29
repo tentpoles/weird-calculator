@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/weird-calculator/static/css/main.91a025ae.chunk.css",
-    "main.js": "/weird-calculator/static/js/main.f845e6b1.chunk.js",
-    "main.js.map": "/weird-calculator/static/js/main.f845e6b1.chunk.js.map",
+    "main.js": "/weird-calculator/static/js/main.e6a0e79e.chunk.js",
+    "main.js.map": "/weird-calculator/static/js/main.e6a0e79e.chunk.js.map",
     "runtime-main.js": "/weird-calculator/static/js/runtime-main.341b09b7.js",
     "runtime-main.js.map": "/weird-calculator/static/js/runtime-main.341b09b7.js.map",
     "static/js/2.70e9ad5d.chunk.js": "/weird-calculator/static/js/2.70e9ad5d.chunk.js",
@@ -17,6 +17,6 @@
     "static/js/runtime-main.341b09b7.js",
     "static/js/2.70e9ad5d.chunk.js",
     "static/css/main.91a025ae.chunk.css",
-    "static/js/main.f845e6b1.chunk.js"
+    "static/js/main.e6a0e79e.chunk.js"
   ]
 }
